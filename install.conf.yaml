@@ -1,0 +1,15 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- shell: 
+    - echo hello
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.config/nvim/init.vim: init.vim
+    ~/.zshrc: zshrc    
+    ~/.tmux/plugins/tpm: tmux/plugins/tpm
+    ~/.oh-my-zsh: zsh/ohmyzsh
