@@ -1,5 +1,6 @@
 set nocompatible " not vi compatible
 
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -9,7 +10,6 @@ Plug 'tpope/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
-
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 call plug#end()
@@ -21,7 +21,7 @@ if has('gui_running')
     colorscheme dracula
     set termguicolors
 elseif &t_Co < 256
-    colorscheme default 
+    colorscheme default
 else
     if (has("termguicolors"))
         colorscheme dracula
@@ -54,7 +54,6 @@ set autochdir " auto change working directory
 set hidden    " allow auto-hiding of edited buffers
 set history=8192
 set nojoinspaces
-set paste
 " use 4 spaces instead of tabs during formatting
 set expandtab
 set tabstop=4
@@ -73,7 +72,8 @@ set noerrorbells visualbell t_vb=
 " open new split panes to right & below
 set splitbelow
 set splitright
-
+" copy content to system clipboard
+set clipboard+=unnamedplus
 " unbind keys
 map <C-a> <Nop>
 
@@ -82,21 +82,20 @@ noremap  <F2> <C-C>:set nu! rnu!<CR>
 " Keymap F3 for NERDTree
 noremap  <F3> <C-C>:NERDTreeToggle<CR>
 " Keymap F4 for rainbow parentheses
-noremap  <F4> <C-C>:RainbowToggle<CR> 
+noremap  <F4> <C-C>:RainbowToggle<CR>
 
 " rainbow parentheses
-let g:rainbow_active = 1 
+let g:rainbow_active = 1
 
 " airline theme
-let g:airline_theme="onedark" 
-let g:airline_powerline_fonts = 1 
+let g:airline_theme="onedark"
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_section_warning='' "remove trailing warning
 let g:airline_detect_whitespace=0
-
 
 " markdown
 let g:markdown_fenced_languages = [
@@ -110,6 +109,4 @@ let g:markdown_fenced_languages = [
 \]
 let g:markdown_syntax_conceal = 0
 let g:markdown_folding = 1
-
-
 
