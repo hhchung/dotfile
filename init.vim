@@ -10,8 +10,7 @@ Plug 'tpope/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 "---------------------
@@ -23,12 +22,9 @@ if has('gui_running')
 elseif &t_Co < 256
     colorscheme default
 else
-    if (has("termguicolors"))
-        colorscheme dracula
-        set termguicolors
-    else
-        colorscheme default
-    endif
+    let g:dracula_colorterm = 0
+    colorscheme dracula
+    set termguicolors
 endif
 
 "---------------------
@@ -74,6 +70,9 @@ set splitbelow
 set splitright
 " copy content to system clipboard
 set clipboard+=unnamedplus
+
+let mapleader=","
+
 " unbind keys
 map <C-a> <Nop>
 
@@ -83,6 +82,11 @@ noremap  <F2> <C-C>:set nu! rnu!<CR>
 noremap  <F3> <C-C>:NERDTreeToggle<CR>
 " Keymap F4 for rainbow parentheses
 noremap  <F4> <C-C>:RainbowToggle<CR>
+
+" Plugin: easymotion/vim-easymotion 
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+
 
 " rainbow parentheses
 let g:rainbow_active = 1
