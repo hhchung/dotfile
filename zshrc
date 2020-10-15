@@ -41,4 +41,5 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 export EDITOR='nvim'
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

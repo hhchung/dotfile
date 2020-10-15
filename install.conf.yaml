@@ -13,3 +13,5 @@
     ~/.zshrc: zshrc    
     ~/.tmux/plugins/tpm: tmux/plugins/tpm
     ~/.oh-my-zsh: zsh/ohmyzsh
+    ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh: zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh: zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

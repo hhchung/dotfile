@@ -8,3 +8,9 @@
 [submodule "zsh/ohmyzsh"]
 	path = zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
