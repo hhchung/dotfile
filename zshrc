@@ -29,7 +29,7 @@ CASE_SENSITIVE="true"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git)
+#plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 

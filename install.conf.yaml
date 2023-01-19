@@ -6,7 +6,8 @@
 - clean: ['~']
 
 - shell: 
-    - echo hello
+    - echo "hhchung dotfile setting"
+ 
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.config/nvim/init.vim: init.vim
